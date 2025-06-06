@@ -1,14 +1,27 @@
 {
-  "name": "portofolio-v5",
+  "name": "dwaraka-kalyan-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "",
   "type": "module",
+  "author": "",
+  "license": "ISC",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChandraShekar2845/my-portfolio-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChandraShekar2845/my-portfolio-website.gitissues"
+  },
+  "homepage": "https://github.com/ChandraShekar2845/my-portfolio-website.git#readme",
+  "keywords": [],
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -24,15 +37,15 @@
     "@splinetool/runtime": "^1.9.37",
     "add": "^2.0.6",
     "aos": "^2.3.4",
+    "axios": "^1.9.0",
     "clsx": "^2.1.1",
     "dialog": "^0.3.1",
-    "express": "^5.1.0",
     "firebase": "^11.0.1",
     "framer-motion": "^11.15.0",
     "gsap": "^3.12.5",
     "lucide-react": "^0.454.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^6.28.0",
     "react-swipeable-views": "^0.14.0",
@@ -45,7 +58,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
@@ -58,5 +71,9 @@
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.10"
+  },
+  "overrides": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
