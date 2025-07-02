@@ -10,96 +10,71 @@ import Swal from 'sweetalert2';
 export const PROJECTS_DATA = [
   {
     id: 1,
-    Title: "Health care Chatbot",
-    Description: "A healthcare chatbot project aims to develop an AI-powered virtual assistant that provides patients with convenient access to medical information, symptom analysis, and guidance.",
-    Img: "https://miro.medium.com/v2/resize:fit:1400/1*KT-dZRwMOA1KuTzVOomxHw.gif",
-    Link: "http://www.linkedin.com/in/meeraj-ahmad-gonnuru-406ab2330",
-    Github: "https://github.com/G-Meeraj/Health-Care-Chatbot",
-    TechStack: ["Python", "Machine Learning", "Flask","Html","Css","OpenAI","React"],
+    Title: "Adventure Works - End to End Data Engineering Project ",
+    Description: "The Adventure Works Data Engineering Project showcases an end-to-end pipeline built on the Medallion Architecture using Azure services. It ingests raw data from GitHub via Azure Data Factory, transforms it with Databricks, and serves analytics-ready data through Synapse Analytics. Power BI is used for creating interactive dashboards and business insights.",
+    Img: "Architecture_AW.jpg",
+    Link: "https://www.linkedin.com/in/chandrashekar-kasireddy/",
+    Github: "https://github.com/ChandraShekar2845/Adventure-Works-Azure-Data-Engineering-Project.git",
+    TechStack: ["Github", "ADF", "Databricks","Synapse Analytics","Power Bi"],
     Features: [
-      "Users can input symptoms to receive possible disease predictions.",
-      "The healthcare chatbot uses machine learning models to predict diseases based on user-reported symptoms, providing personalized healthcare advice and guidance.",
-      "Develop an intuitive UI with HTML, CSS, and JavaScript",
-      "Deploy the chatbot as a web service using Flask and test it to ensure its effectiveness in providing healthcare assistance."
+      "The project follows the Medallion Architecture, organizing data into Bronze (raw), Silver (cleaned), and Gold (curated) layers.",
+      "Azure Data Factory is used to dynamically ingest 10 CSV files from GitHub using parameterized pipelines.",
+      "Data is processed in Azure Databricks using PySpark, applying transformations like date parsing, column concatenation, and schema enforcement.",
+      "Transformed data is stored in the Silver layer in Parquet format for optimized storage and querying.",
+      "Azure Synapse Analytics serves the curated data by creating serverless SQL views and external tables using CETAS.",
+      "Power BI connects to Synapse SQL endpoints to create interactive dashboards for sales, customer, and product insights."
     ]
   },
   {
-    id: 2,
-    Title: "Heart Disease Prediction",
-    Description: "This project is a Heart Disease Prediction web application built using Flask and Machine Learning. The model predicts the likelihood of a person having heart disease based on various input parameters.",
-    Img: "https://media.licdn.com/dms/image/v2/D5622AQEvzdaHJ0oXkw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1707987384761?e=2147483647&v=beta&t=fO8P09T0lXA_N1e5jtVTk1QGuaPPzy7SUES3vP1Z6aU",
-    Link: "https://www.linkedin.com/posts/meeraj-ahmad-gonnuru-406ab2330_machinelearning-heartdiseaseprediction-aiinhealthcare-activity-7316398949693624322-AWjy?utm_source=share&utm_medium=member_android&rcm=ACoAAFN0wsYBDwo8yxAlkBL7UcKD71I-blOj5yo",
-    Github: "https://github.com/G-Meeraj/Heart-Disease-Prediction",
-    TechStack: ["Python", "Machine Learning", "Flask","Html","Css"],
+     id: 2,
+    Title: "Spotify End to End Data Engineering Project",
+    Description: "In this project I built an ETL(Extract, Transform, Load) pipeline using the Spotify API on AWS. The pipeline will retrieve data from the Spotify API, transform it to a desired format, and load it into an AWS data store.",
+    Img: "Architecture_SP.jpg",
+    Link: "https://www.linkedin.com/in/chandrashekar-kasireddy/",
+    Github: "https://github.com/ChandraShekar2845/Spotify-End-to-End-Data-Engineering-Project.git",
+    TechStack: ["Python", "AWS", "Snowflake","Chatgpt","jupyter notebook"],
     Features: [
-      "Easy-to-use web form for inputting health metrics",
-      "Machine learning model predicts likelihood of heart disease",
-      "Provides heart health tips based on prediction",
-      "Clean, healthcare-themed interface (customizable with HTML/CSS)",
+      "Getting the data from Spotify API about Top 50 global songs because we want to know what is ringing in the world in a daily basis (songs , albums and artists).",
+      "For this project we are gonna apply ETL process to deploy our project to the cloud.",
+      "By implementing this fully automated data pipeline, we ensure that new data from the Spotify API is efficiently processed and made available for analysis",
+      "This project showcases the power and versatility of AWS Cloud Platform in building robust and automated data engineering solutions."
     ]
   },
-  {
+    {
     id: 3,
-    Title: "Flight Fare Prediction",
-    Description: "This project is a Flight Price Prediction web application built using Flask and Machine Learning. The model predicts the price of flight tickets based on various input parameters.",
-    Img: "https://miro.medium.com/v2/resize:fit:1400/0*3_PnJ1Bt1tVJ8Ssd.gif",
-    Link: "https://www.linkedin.com/posts/meeraj-ahmad-gonnuru-406ab2330_machinelearning-flask-internshipproject-activity-7317452566433267713-Kubj?utm_source=share&utm_medium=member_android&rcm=ACoAAFN0wsYBDwo8yxAlkBL7UcKD71I-blOj5yo",
-    Github: "https://github.com/G-Meeraj/Flight-Price-Prediction",
-    TechStack: ["Python", "Machine Learning", "Flask","Html","Css"],
+    Title: "Daily Stock Price ETL Pipeline with Apache Airflow",
+    Description: "This ETL pipeline project retrieves historical stock data from the Financial Modeling Prep (FMP) API, computes moving averages, saves the results to a CSV file, and uploads the data to an Amazon S3 bucket. The pipeline is automated to run daily using Apache Airflow.",
+    Img: "Architecture_Airflow.png",
+    Link: "https://www.linkedin.com/in/chandrashekar-kasireddy/",
+    Github: "https://github.com/ChandraShekar2845/Daily-Stock-Price-ETL-Pipeline-with-Apache-Airflow.git",
+    TechStack: ["Python", "Pandas","Amazon S3","Airflow",],
     Features: [
-      "Predicts flight ticket prices based on user inputs.",
-      "PUtilizes a trained Machine Learning model.",
-      "SFlask-based web application with an interactive frontend.",
-      "Supports categorical data encoding for better predictions.",
-      "Simple and easy-to-use interface."
+         "Extracts 200 days of historical stock prices (e.g., AAPL/MSFT) from the FMP API using a registered API key.",
+         "Computes 50-day and 200-day Simple Moving Averages (SMA) using Pandas' rolling() and mean() functions.",
+         "Saves transformed data to a local CSV file and uploads it to Amazon S3 using IAM credentials.",
+         "Orchestrates the ETL process as an Airflow DAG within a Docker containerized environment.",
+         "Automates daily execution to fetch, process, and load stock data without manual intervention."
     ]
   },
   {
     id: 4,
-    Title: "Health Insurance Prediction",
-    Description: "This project aims to build a web-based application that predicts individual health insurance costs based on user input using a trained machine learning model. The model considers various features such as age, gender, BMI, smoking status, and region to provide an estimated insurance premium.",
-    Img: "https://user-images.githubusercontent.com/91398845/207703224-2d95afc5-b18b-4323-8e39-1d1dab8e95b9.png",
-    Link: "https://www.linkedin.com/posts/meeraj-ahmad-gonnuru-406ab2330_machinelearning-flask-datascience-activity-7318901786726027266-hAtj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFN0wsYBDwo8yxAlkBL7UcKD71I-blOj5yo",
-    Github: "https://github.com/G-Meeraj/Health-Insurance-Prediction",
-    TechStack: ["Python", "Machine Learning", "Flask","Html","Css"],
+    Title: "Real-Time-Weather-Data-Ingestion-Pipeline",
+    Description: "This project ingests real-time weather data from OpenWeatherMap API, stores it in raw and processed formats, and loads it into a PostgreSQL database.",
+    Img: "Architecture_Weather.png",
+    Link: "https://www.linkedin.com/in/chandrashekar-kasireddy/",
+    Github: "https://github.com/ChandraShekar2845/Real-Time-Weather-Data-Ingestion-Pipeline.git",
+    TechStack: ["Python", "Amazon S3", "Postgres SQL",],
     Features: [
-      "Predicts Health Insurance Prediction based on user inputs.",
-      "PUtilizes a trained Machine Learning model",
-      "SFlask-based web application with an interactive frontend.",
-      "Supports categorical data encoding for better predictions.",
-      "Simple and easy-to-use interface."
+        "ingest.py: Pulls data from API and saves as JSON & CSV",
+        "validate.py: Validates processed CSV",
+        "load_to_db.py: Loads CSV data into PostgreSQL",
+        "config/config.json: Configuration file with API key",
+        "Add your OpenWeatherMap API key to config/config.json",
+        "Run python ingest.py to collect data",
+        "Run python validate.py <path_to_csv>",
+        "Run python load_to_db.py to load into PostgreSQL"
     ]
   },
-  {
-    id: 5,
-    Title: "Bike rental",
-    Description: "The goal of this project is to develop a machine learning model that accurately predicts the number of bikes rented on a given day based on various environmental and seasonal factors. This can help bike rental companies optimize inventory, staffing, and maintenance schedules.",
-    Img: "https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/desktop/rbx_banner-a8582ea39f40667b3c94a9bc269a69effb6be8ce78f2f7c6aab995f51469c6c9.webp",
-    Link: "http://www.linkedin.com/in/meeraj-ahmad-gonnuru-406ab2330",
-    Github: "https://github.com/G-Meeraj/G-Meeraj-Bike-Rental-Prediction-",
-    TechStack: ["Python", "Machine Learning", "Flask","Html","Css"],
-    Features: [
-      "Predicts Bike rental based on user inputs.",
-      "PUtilizes a trained Machine Learning model",
-      "SFlask-based web application with an interactive frontend.",
-      "Supports categorical data encoding for better predictions.",
-      "Simple and easy-to-use interface."
-    ]
-  },
-  {
-    id: 6,
-    Title: "Surveillance Robot Based On IoT",
-    Description: "A robot that can detect metals and objects, controlled by Arduino microcontroller using internet for surveillance purposes.",
-    Img: "https://hackster.imgix.net/uploads/attachments/1478489/fx8-mnk4sto-hd_TKzmvLfKQr.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-    Link: "https://drive.google.com/file/d/1AneQ3H60V0Rta1IyU94G-0sHmpf405r4/view",
-
-    TechStack: ["IDE:Arduino IDE.", "Embedded C", "Wi-Fi module", "Solar panels", "Arduino"],
-    Features: [
-      "A robot to perform the act of surveillance in domestic areas.",
-      "It can be used for the security performance and also speed be increased by using this type of vehicle.",
-      "The purpose of this robot is to roam around and provide audio and video information from the given environment and to send that obtained information to the user.",
-    ]
-  }
   // Add more projects as needed
 ];
 
@@ -115,8 +90,8 @@ const TECH_ICONS = {
 };
 
 const GITHUB_PROFILE = {
-  username: "G-Meeraj",
-  url: "https://github.com/G-Meeraj",
+  username: "Chandrashekar",
+  url: "https://github.com/ChandraShekar2845",
   description: "View all my projects on GitHub"
 };
 
