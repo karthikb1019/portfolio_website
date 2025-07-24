@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       height: {
-        240: "240px",
-        500: "500px",
+        'card': '240px',       // use class: h-card
+        'desktop': '500px',    // use class: h-desktop
       },
       minHeight: {
-        240: "240px",
-        500: "500px",
+        'card': '240px',
+        'desktop': '500px',
       },
       fontFamily: {
-        poppins: ['"Poppins"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       backdropBlur: {
         sm: '4px',

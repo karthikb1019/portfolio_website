@@ -6,10 +6,11 @@ import {
   ChevronRight, Layers, Layout, Globe, Package, Cpu, Code,
 } from "lucide-react";
 import Swal from 'sweetalert2';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { ChevronLeft} from "lucide-react";
+
 
 // Static projects data - export it so it can be imported in Portofolio.jsx
 export const PROJECTS_DATA = [
@@ -1038,14 +1039,41 @@ const PrevArrow = (props) => {
               </div>
             </div>
 
-            <div className="space-y-6 md:space-y-10 animate-slideInRight">
-              {/* Project Image / Slider */}
-              <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {/* Slider with responsive height */}
-                  ?????????
+            <div className="relative w-full h-[240px] md:h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+            <Slider
+              dots={true}
+              infinite={true}
+              speed={500}
+              slidesToShow={1}
+              slidesToScroll={1}
+              arrows={true}
+              autoplay={false}
+              adaptiveHeight={true}
+              nextArrow={<NextArrow />}
+              prevArrow={<PrevArrow />}
+            >
+              {Array.isArray(project.Img) ? (
+                project.Img.map((imgUrl, index) => (
+                  <div key={index} className="h-[240px] md:h-[500px]">
+                    <img
+                      src={imgUrl}
+                      alt={`${project.Title} ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))
+              ) : (
+                <img
+                  src={project.Img}
+                  alt={project.Title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </Slider>
 
+            {/* Border hover */}
+            <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
+          
 
 
                 {/* Border on hover */}
@@ -1071,7 +1099,6 @@ const PrevArrow = (props) => {
             </div>
           </div>
         </div>
-      </div>
 
       <style jsx>{`
         @keyframes blob {

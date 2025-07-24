@@ -215,7 +215,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Welcome to my world of intelligent systems and data-driven innovation. I build scalable AI pipelines, automate workflows, and bring machine learning models to life.
+                  Welcome to my world of intelligent systems and data-driven innovation. 
                 </p>
 
                 {/* Tech Stack */}
