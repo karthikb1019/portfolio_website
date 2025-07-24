@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
@@ -1038,44 +1039,20 @@ const PrevArrow = (props) => {
             </div>
 
             <div className="space-y-6 md:space-y-10 animate-slideInRight">
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-              
+              {/* Project Image / Slider */}
+              <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                  <Slider
-                      dots={true}
-                      infinite={true}
-                      speed={500}
-                      slidesToShow={1}
-                      slidesToScroll={1}
-                      arrows={true}
-                      autoplay={false}
-                      nextArrow={<NextArrow />}
-                      prevArrow={<PrevArrow />}
-                  >
-                    {Array.isArray(project.Img) ? (
-                      project.Img.map((imgUrl, index) => (
-                        <div key={index}>
-                          <img
-                            src={imgUrl}
-                            alt={`${project.Title} ${index + 1}`}
-                            className="w-full h-auto object-cover rounded-2xl"
-                          />
-                        </div>
-                      ))
-                    ) : (
-                      <img
-                        src={project.Img}
-                        alt={project.Title}
-                        className="w-full h-auto object-cover rounded-2xl"
-                      />
-                    )}
-                  </Slider>
-                </div>
+                {/* Slider with responsive height */}
+                  ?????????
+
+
+
+                {/* Border on hover */}
                 <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
               </div>
 
-              {/* Fitur Utama */}
+              {/* Key Features Section */}
               <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/10 space-y-6 hover:border-white/20 transition-colors duration-300 group">
                 <h3 className="text-xl font-semibold text-white/90 flex items-center gap-3">
                   <Star className="w-5 h-5 text-yellow-400 group-hover:rotate-[20deg] transition-transform duration-300" />

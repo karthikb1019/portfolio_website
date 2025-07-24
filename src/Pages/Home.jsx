@@ -189,12 +189,15 @@ const Home = () => {
               data-aos="fade-right"
               data-aos-delay="200">
               <div className="space-y-4 sm:space-y-6">
+                <br />
+                <br />
+                <br />
                 <StatusBadge />
                     {/* Company Logos */}
                   <div className="flex flex-wrap items-center gap-4 mb-2" data-aos="fade-up" data-aos-delay="300">
                     <img src="amazon.svg" alt="Amazon" className="h-10 sm:h-12 object-contain" />
                     <img src="osu.svg" alt="Osu" className="h-10 sm:h-12 object-contain" />
-                    <img src="mdhhs.png" alt="Mdhhs" className="h-15 sm:h-14 object-contain" />
+                    <img src="mdhhs.svg" alt="Osu" className="h-10 sm:h-12 object-contain" />
                     <img src="mphi.png" alt="Mphi" className="h-10 sm:h-12 object-contain" />
                     {/* Add more logos here */}
                   </div>
@@ -254,7 +257,7 @@ const Home = () => {
                 }`}>
                 <div className="flex justify-center items-center p-4">
                   <img 
-                    src="/mygif.gif" 
+                    src="/gifimage.png" 
                     alt="AI Engineer Animation"
                     className={`max-w-[400px] w-full h-auto object-contain transition-all duration-500 ${
                       isHovering 

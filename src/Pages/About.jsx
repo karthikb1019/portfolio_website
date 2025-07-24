@@ -150,7 +150,7 @@ const ImageCarousel = () => {
               <img
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="rounded-2xl w-full h-[21rem] object-cover shadow-2xl"
+                className="rounded-2xl w-full h-[14rem] sm:h-[16rem] md:h-[18rem] lg:h-[20rem] object-cover shadow-2xl"
                 loading="lazy"
               />
             </div>
