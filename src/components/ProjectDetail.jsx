@@ -53,29 +53,8 @@ export const PROJECTS_DATA = [
 
     ]
   },
-    {
-    id: 3,
-    Title: "Snowflake Data Pipeline",
-    Description: "This document provides an overview of the ETL (Extract, Transform, Load) process implemented using Snowflake, a cloud-based data warehousing platform. The process involves loading data from a CSV file into a Snowflake table, cleaning the data using SQL queries, creating new tables in a separate database for cleaned data, and building a data model for analytics.",
-    Img: ["https://i.ibb.co/XZrgf3Sz/Snowflake-Datapipeline.png",
-          "https://i.ibb.co/XZrgf3Sz/Snowflake-Datapipeline.png",
-          "https://i.ibb.co/XZrgf3Sz/Snowflake-Datapipeline.png"
-    ],
-    Link: "https://drive.google.com/file/d/152NZkMbfqHAP4U0se5ecLNUUCftXH4iK/view?usp=sharing",
-    Github: "https://github.com/karthikb1019/Snowflake_DataPipeline.git",
-    TechStack: ["Jupyter Notebook", "SQL", "Snowflake", "Python", "CSV"],
-    Features: [
-                "Clone the repository: git clone https://github.com/ajmahato/Snowflake_DataPipeline.git cd Snowflake_DataPipeline",
-                "Create snowflake setup Use the Initial_DB.sql file in Initial_DB folder to setup the snowflake by creating the database and the required tables",
-                "Load data to the tables Load the data to the tables from the csv file.",
-                "Usage Use the ETL_with_Python.py Python script to load data from a CSV file into a Snowflake table. Update the script with your Snowflake credentials and CSV file path.",
-                "Create final DB Execute the Final_DB.sql file to create the final database and the required tables.",
-                "Clean data and move it to new database Execute Data_Cleaning.sql file available in final_DB folder to clean the data in Snowflake. Modify the clean_data.sql file as needed for your cleaning requirements.",
-                "Create data model Execute the Final_combined_table.sql file to create the data model where we join all the tables for faster queries."
-              ]
-  },
   {
-    id: 4,
+    id: 3,
     Title: "Bike Sale Analysis Dashboard",
     Description: "The Bike Sale Analysis Dashboard offers a comprehensive view of bike sales data, encompassing insights into customer demographics, purchase behavior, and regional trends. The dashboard is organized into multiple sheets, each focusing on a distinct aspect of the data.",
     Img: ["https://i.ibb.co/0pDvgHMB/Bike-Sales-Analysis.png",
@@ -96,7 +75,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 5,
+    id: 4,
     Title: "Road Accident Analysis Dashboard",
     Description: "The objective of this project is to create an Excel dashboard for analyzing road accident data to identify trends and patterns.",
     Img: ["https://i.ibb.co/RkZyWrjv/Road-Accident-Analysis.png",
@@ -135,7 +114,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     Title: "Airbnb NYC Tableau Dashboard",
     Description: "This project involves creating an interactive Tableau dashboard to analyze and visualize Airbnb data in New York City. The dataset includes various attributes such as host names, neighborhood groups, room types, pricing, and reviews. The goal of this dashboard is to provide insights into Airbnb trends across different neighborhoods in NYC.",
     Img: ["https://i.ibb.co/sn8h20H/Airbnb-Dashboard.png",
@@ -193,7 +172,7 @@ export const PROJECTS_DATA = [
     ]
 },
     {
-    id: 7,
+    id: 6,
     Title: "Amazon Sales Dashboard using Tableau",
     Description: "This project involves creating an interactive Tableau dashboard to analyze Amazon sales in India. The dataset used contains detailed information on sales channels, courier statuses, product categories, sizes, and geographical distribution of sales. The dashboard provides insights that are crucial for decision-making in sales strategy, marketing, and inventory management.",
     Img: ["https://i.ibb.co/hwgzqtq/Amazon-Sales-Dashboard.png",
@@ -267,7 +246,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 8,
+    id: 7,
     Title: "HR Analytics Dashboard Project",
     Description: "This HR Analytics project focuses on analyzing employee attrition in an organization. The objective is to identify key factors influencing employee turnover, including age, job role, department, education, gender, and marital status. The insights gained from this analysis can help HR departments develop targeted strategies to improve employee retention.",
     Img: ["https://i.ibb.co/N2b6FB8N/HR-Analytics-Dashboard.png",
@@ -307,7 +286,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 9,
+    id: 8,
     Title: "Bank Loan Report - Excel Dashboard Project",
     Description: "The Bank Loan Report is an Excel-based project designed to provide a comprehensive analysis of loan performance within the financial domain. This project incorporates dynamic dashboards, pivot tables, and interactive elements, offering stakeholders critical insights into loan trends, risk management, and overall operational efficiency.",
     Img: ["https://i.ibb.co/d47msBHS/Bank-Loan-Overview.png",
@@ -358,7 +337,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 10,
+    id: 9,
     Title: "Credit Card Complaints Dashboard",
     Description: "The Credit Card Complaints Dashboard is a comprehensive Tableau project that visualizes data related to customer complaints. This dashboard is designed to provide key insights into the nature and distribution of complaints, helping stakeholders make data-driven decisions to improve customer service.",
     Img: ["https://i.ibb.co/x8MVNHfk/Credit-Card-Dashboard.png",
@@ -399,7 +378,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 11,
+    id: 10,
     Title: "Netflix Data Visualization Dashboard",
     Description: "This project provides a detailed analysis of Netflix’s content library using Tableau. It includes key visualizations that offer insights into various aspects of Netflix’s offerings, such as the distribution of movies and TV shows by year, genre, ratings, and geographical contribution.",
     Img: ["https://i.ibb.co/QFycLcFt/Netflix.png",
@@ -456,7 +435,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 12,
+    id: 11,
     Title: "Healthcare Data Analysis - Heart Failure Prediction Dashboard",
     Description: "This Tableau project is centered around visualizing and analyzing heart failure data. The goal is to explore factors that influence survival rates among patients with heart failure, using various data visualization techniques. The dashboard enables healthcare professionals to make informed decisions by providing insights into the impact of different medical conditions on patient outcomes.",
     Img: ["https://i.ibb.co/YBvXqCjz/Health-Care-Dashboard.png",
@@ -516,7 +495,7 @@ export const PROJECTS_DATA = [
     ]
   },
     {
-    id: 13,
+    id: 12,
     Title: "Amazon Prime Video Data Dashboard using Tableau",
     Description: "This project involves the creation of an interactive Tableau dashboard designed to analyze and visualize data from nearly 10,000 Amazon Prime Video titles, including both movies and TV shows. The goal of this dashboard is to provide actionable insights that can aid in strategic decision-making for content acquisition, marketing, and data analysis.",
     Img: ["https://i.ibb.co/XkLyfW88/Amazonpime-Dashboard.png",
@@ -575,7 +554,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 14,
+    id: 13,
     Title: "Trip Advisor Hotel Analysis Dashboard",
     Description: "The Trip Advisor Hotel Analysis Dashboard is a comprehensive tool designed to provide insights into hotel data from Las Vegas. This Tableau dashboard analyzes various aspects of hotel performance, guest demographics, and service offerings. It serves as an essential resource for hotel managers, travel agencies, and marketing teams, enabling them to make data-driven decisions that enhance guest satisfaction, optimize services, and improve overall hotel performance.",
     Img: ["https://i.ibb.co/npGQT0D/Trip-Advisor-Dashboard.png",
@@ -630,7 +609,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 15,
+    id: 14,
     Title: "Data Science Job Salaries Analysis Project",
     Description: " This project showcases my ability to leverage Tableau for creating an interactive and insightful dashboard that provides a deep dive into the salary trends of Data Science professionals across various regions, job titles, experience levels, and employment types.The primary objective of this project is to analyze and visualize the Data Science job salaries across different dimensions to uncover trends, disparities, and benchmarks. This dashboard is designed to assist HR professionals, recruiters, and Data Science enthusiasts in making informed decisions regarding salary expectations and offerings.",
     Img: ["https://i.ibb.co/B29LKsbd/Dashboard-Data-Science-job-salaries.png",
@@ -685,7 +664,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 16,
+    id: 15,
     Title: "Sales Dashboard Project",
     Description: "The Sales Dashboard Project is designed to provide real-time insights into sales performance, customer behavior, and product profitability. Built using Excel, this dashboard enables stakeholders to make informed decisions based on comprehensive data analysis. The project is tailored to meet the needs of Sales Teams, Business Analysts, and Executives.",
     Img: ["https://i.ibb.co/bM8frzCt/Sales-Dashboard.png ",
@@ -727,7 +706,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 17,
+    id: 16,
     Title: "Superstore Sales Analysis Project",
     Description: "The Superstore Sales Analysis Project involves a detailed examination of sales data from a fictional Superstore, carried out using Excel. The focus is on understanding key metrics such as total sales, profit, and quantity sold across different regions and product categories. This project includes the creation of an interactive dashboard that visualizes these metrics, providing insights to improve decision-making processes for managers and stakeholders.",
     Img: ["https://i.ibb.co/VYXz1Vgs/Dashboard.png ",
