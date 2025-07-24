@@ -1,7 +1,14 @@
 import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
+import {
+  FileText, Code, Award, Globe,
+  ArrowUpRight, Sparkles, UserCheck, Briefcase
+} from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 // Memoized Components
 const Header = memo(() => (
@@ -21,7 +28,7 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400" />
-      Building reliable data pipelines that turn chaos into clarity
+      Turning Data into Intelligence. Models into Impact.
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
@@ -50,7 +57,7 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
           
           <img
-            src="https://i.ibb.co/9m1kXCHc/Profile-Picture.jpg"
+            src="image20.JPG"
             alt="Profile"
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
             loading="lazy"
@@ -111,6 +118,58 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
     </div>
   </div>
 ));
+const ImageCarousel = () => {
+  const images = [
+    "image1.jpg",
+    "image2.jpg",
+    "image4.jpg",
+    "image7.JPG",
+    "image3.JPG",
+    "image5.jpg",
+    "image6.jpg",
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false
+  };
+
+  return (
+    <div className="flex justify-center items-center w-full mt-16" data-aos="fade-up">
+      <div className="w-full max-w-[1100px] px-4">
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div key={index} className="flex justify-center">
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="rounded-2xl w-full h-[21rem] object-cover shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <style jsx global>{`
+        .slick-dots li button:before {
+          color: white !important;
+          font-size: 12px;
+        }
+        .slick-dots li.slick-active button:before {
+          color: #ffffffff !important;
+        }
+      `}</style>
+    </div>
+  );
+};
 
 const AboutPage = () => {
   // Memoized calculations
@@ -118,7 +177,7 @@ const AboutPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2023-11-06");
+    const startDate = new Date("2018-02-01");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
@@ -173,7 +232,7 @@ const AboutPage = () => {
       animation: "fade-up",
     },
     {
-      icon: Globe,
+      icon: Briefcase,
       color: "from-[#6366f1] to-[#a855f7]",
       value: YearExperience,
       label: "Years of Experience",
@@ -182,17 +241,13 @@ const AboutPage = () => {
     },
   ], [totalProjects, totalCertificates, YearExperience]);
 
-  const handleCVDownload = (type) => {
-    const confirmed = window.confirm(`Do you want to download the ${type}?`);
-    if (confirmed) {
-      const cvLinks = {
-        'Professional Resume': 'https://drive.google.com/file/d/1XcBIu9YVKXpTm9XKOnfOfKMG1tJsw_9E/view?usp=sharing',
-        'ATS Resume': 'https://drive.google.com/file/d/1XcBIu9YVKXpTm9XKOnfOfKMG1tJsw_9E/view?usp=sharing'
-      };
-      window.open(cvLinks[type], '_blank');
-    }
-  };
-
+  const handleCVDownload = () => {
+  const confirmed = window.confirm("Do you want to download the CV?");
+  if (confirmed) {
+    const cvLink = 'https://drive.google.com/file/d/1XcBIu9YVKXpTm9XKOnfOfKMG1tJsw_9E/view?usp=sharing';
+    window.open(cvLink, '_blank');
+  }
+};
   return (
     <div
       className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10 sm-mt-0" 
@@ -216,7 +271,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                CHANDRASHEKARREDDY KASIREDDY
+                KARTHIK SUMAN BATHINI
               </span>
             </h2>
             
@@ -225,42 +280,29 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              I'm a passionate Data Engineer with a strong foundation in Python, SQL, Spark, and Big Data. I specialize in transforming raw datasets into actionable insights using modern data tools and cloud platforms like AWS and Azure. 
+              I'm a passionate AI & ML Data Engineer with hands-on expertise in building scalable, production-grade data and ML pipelines. With professional experience at Amazon and MPHI, I specialize in deploying AI Agents, fine-tuning LLMs, automating workflows with n8n, and delivering robust MLOps & DataOps solutions. 
             </p>
             <p 
               className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              With hands-on experience in building ETL pipelines with Airflow and Spark, I've worked extensively with Hadoop, Kafka, Snowflake, Docker, and Kubernetes—bringing complex business logic to life through efficient SQL and scalable infrastructure.              </p>
+              I’m certified as an AWS DevOps Professional and skilled in leveraging cloud-native tools, Hugging Face Transformers, and orchestration platforms to operationalize models and drive actionable insights. My mission is to transform raw data into intelligent automation and make machine learning systems reliable, repeatable, and real-time.              
+              </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
               <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                 <div className="relative group">
                   <button 
-                    onClick={() => handleCVDownload('Professional Resume')}
+                    onClick={handleCVDownload}
                     data-aos="fade-up"
                     data-aos-duration="800"
                     className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
                   >
-                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Modern CV
+                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                   </button>
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                    Download my Modern CV
-                  </div>
-                </div>
-                
-                <div className="relative group">
-                  <button 
-                    onClick={() => handleCVDownload('ATS Resume')}
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
-                  >
-                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> ATS CV
-                  </button>
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                    Download my ATS-friendly CV
+                    Download my CV
                   </div>
                 </div>
               </div>
@@ -277,6 +319,7 @@ const AboutPage = () => {
           </div>
 
           <ProfileImage />
+          <ImageCarousel />
         </div>
 
         <a href="#Portofolio">

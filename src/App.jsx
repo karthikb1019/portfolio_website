@@ -10,6 +10,9 @@ import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
+import Articles from "./Pages/Articles";
+import ArticleDetail from "./Pages/ArticleDetail";
+
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
@@ -34,7 +37,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
               <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
                 © 2025{" "}
                 <a href="https://flowbite.com/" className="hover:underline">
-                  Chandrashekar™
+                  KarthikSuman™
                 </a>
                 . All Rights Reserved.
               </span>
@@ -55,7 +58,7 @@ const ProjectPageLayout = () => (
         <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
           © 2025{" "}
           <a href="https://flowbite.com/" className="hover:underline">
-            Chandrashekar™
+            KarthikSuman™
           </a>
           . All Rights Reserved.
         </span>
@@ -70,8 +73,23 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              showWelcome={showWelcome}
+              setShowWelcome={setShowWelcome}
+            />
+          }
+        />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
+
+        {/* ✅ Add these two routes */}
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:id" element={<ArticleDetail />} />
+
+        {/* Optional: Not found fallback */}
+        <Route path="*" element={<div className="text-white p-6">Page Not Found</div>} />
       </Routes>
     </BrowserRouter>
   );

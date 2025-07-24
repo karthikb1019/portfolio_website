@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react"
-import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles,Globe } from "lucide-react"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -23,7 +23,7 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Data
+          AI & ML Data
         </span>
       </span>
       <br />
@@ -71,15 +71,39 @@ const SocialLink = memo(({ icon: Icon, link }) => (
   </a>
 ));
 
+// Medium Icon
+const MediumIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 1043.63 592.71" fill="currentColor" xmlns="medium.svg">
+    <path d="M588.67 296.48a296.48 296.48 0 1 1-592.96 0 296.48 296.48 0 0 1 592.96 0zM747.83 296.48c0 160.38-66.39 290.41-148.26 290.41-81.87 0-148.26-130.03-148.26-290.41 0-160.38 66.39-290.41 148.26-290.41 81.87 0 148.26 130.03 148.26 290.41zM1043.63 296.48c0 145.77-28.03 263.85-62.58 263.85s-62.58-118.08-62.58-263.85 28.03-263.85 62.58-263.85 62.58 118.08 62.58 263.85z"/>
+  </svg>
+);
+// Power BI Icon
+const PowerBIIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" xmlns="powerbi.svg">
+    <path d="M19.87 9.5l-1.75-.25c-.33-.05-.64.18-.69.51l-2 13.25c-.05.33.18.64.51.69l1.75.25c.33.05.64-.18.69-.51l2-13.25c.05-.33-.18-.64-.51-.69zM4.87 2.5L3.12 2.75c-.33.05-.56.36-.51.69l2 13.25c.05.33.36.56.69.51l1.75-.25c.33-.05.56-.36.51-.69L6.3 3.45c-.05-.33-.36-.56-.69-.51zm4 2l-1.75.25c-.33.05-.56.36-.51.69l2 13.25c.05.33.36.56.69.51l1.75-.25c.33-.05.56-.36.51-.69l-2-13.25c-.05-.33-.36-.56-.69-.51zm8 2l-1.75.25c-.33.05-.56.36-.51.69l2 13.25c.05.33.36.56.69.51l1.75-.25c.33-.05.56-.36.51-.69l-2-13.25c-.05-.33-.36-.56-.69-.51z" />
+  </svg>
+);
+
+// Tableau Icon
+const TableauIcon = () => (
+  <svg viewBox="0 0 448 512" fill="currentColor" width="18" height="18" xmlns="tableau.svg">
+    <path d="M256 144h32v32h-32v32h-32v-32h-32v-32h32v-32h32v32zm64 112h32v32h-32v32h-32v-32h-32v-32h32v-32h32v32zm-192 0h32v32h-32v32h-32v-32H96v-32h32v-32h32v32zm96 96h32v32h-32v32h-32v-32h-32v-32h32v-32h32v32zm0-192h32v32h-32v32h-32v-32h-32v-32h32v-32h32v32z" />
+  </svg>
+);
+
+
 // Constants
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
-const PAUSE_DURATION = 2000;
-const WORDS = ["Data Ingestion", "Data Processing & Transformation","Data Storage & Management"];
-const TECH_STACK = ["Python", "SQL", "Numpy", "Pandas", "Git", "Github", "Bigdata","Spark","Airflow", "Kafka", "Snowflake", "Docker", "Kubernetes","Hadoop", "AWS", "Azure", "JyputerNotebook"];
+const PAUSE_DURATION = 1000;
+const WORDS = ["Amazon & MPHI Alum", "LLMs","AI Agents", "Hugging Face", "n8n Automation", "MLOps/DataOps", "AWS Devops Professional Certified"];
+const TECH_STACK = [];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/ChandraShekar2845/" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/chandrashekar-kasireddy/" }
+  { icon: Github, link: "https://github.com/karthikb1019/" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/karthiksuman/" },
+  { icon: () => <img src="medium.svg" alt="Medium" className="w-5 h-5" />, link: "https://medium.com/@karthiksuman53" },
+  { icon: () => <img src="powerbi.svg" alt="Power BI" className="w-5 h-5" />, link: "https://github.com/karthikb1019/" },
+  { icon: () => <img src="tableau.svg" alt="Tableau" className="w-5 h-5" />, link: "https://github.com/karthikb1019/" },
 ];
 
 const Home = () => {
@@ -166,6 +190,14 @@ const Home = () => {
               data-aos-delay="200">
               <div className="space-y-4 sm:space-y-6">
                 <StatusBadge />
+                    {/* Company Logos */}
+                  <div className="flex flex-wrap items-center gap-4 mb-2" data-aos="fade-up" data-aos-delay="300">
+                    <img src="amazon.svg" alt="Amazon" className="h-10 sm:h-12 object-contain" />
+                    <img src="osu.svg" alt="Osu" className="h-10 sm:h-12 object-contain" />
+                    <img src="mdhhs.png" alt="Mdhhs" className="h-15 sm:h-14 object-contain" />
+                    <img src="mphi.png" alt="Mphi" className="h-10 sm:h-12 object-contain" />
+                    {/* Add more logos here */}
+                  </div>
                 <MainTitle />
 
                 {/* Typing Effect */}
@@ -180,7 +212,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Welcome! Explore data, insights, and innovation. We're here to help you unlock the power of information.
+                  Welcome to my world of intelligent systems and data-driven innovation. I build scalable AI pipelines, automate workflows, and bring machine learning models to life.
                 </p>
 
                 {/* Tech Stack */}
@@ -220,7 +252,18 @@ const Home = () => {
                 <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${
                   isHovering ? "scale-105" : "scale-100"
                 }`}>
-                  <DotLottieReact {...lottieOptions} />
+                <div className="flex justify-center items-center p-4">
+                  <img 
+                    src="/mygif.gif" 
+                    alt="AI Engineer Animation"
+                    className={`max-w-[400px] w-full h-auto object-contain transition-all duration-500 ${
+                      isHovering 
+                        ? "scale-[105%] rotate-1" 
+                        : "scale-100"
+                    }`} 
+                  />
+                </div>
+
                 </div>
 
                 <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
